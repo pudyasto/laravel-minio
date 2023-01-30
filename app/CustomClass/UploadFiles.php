@@ -63,7 +63,7 @@ class UploadFiles
             if (Storage::cloud()->exists($filename)) {
                 return Storage::cloud()->temporaryUrl(
                     $data->location,
-                    \Carbon\Carbon::now()->addMinutes(5),
+                    \Carbon\Carbon::now()->addMinutes(60  * 24), // Link 1 hari
                     [
                         'ResponseContentType' => 'application/octet-stream',
                         'ResponseContentDisposition' => 'attachment; filename=' . $data->name,
