@@ -59,12 +59,12 @@ return [
 
         'minio' => [
             'driver' => 's3',
-            'endpoint' => env('MINIO_ENDPOINT', 'http://172.17.0.2:9000'),
+            'endpoint' => env('MINIO_ENDPOINT'),
             'use_path_style_endpoint' => true,
-            'key' => env('MINIO_KEY','iSSOI2XbTggCP6GN'),
-            'secret' => env('MINIO_SECRET','kPApUlJUdfBZscXPlAJ1steN9aj2bJvw'),
-            'region' => env('MINIO_REGION','minio'),
-            'bucket' => env('MINIO_BUCKET','laravel'),
+            'key' => env('MINIO_KEY'),
+            'secret' => env('MINIO_SECRET'),
+            'region' => env('MINIO_REGION'),
+            'bucket' => env('MINIO_BUCKET'),
         ],
 
     ],
